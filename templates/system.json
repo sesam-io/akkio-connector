@@ -1,0 +1,48 @@
+{
+  "_id": "{{@ system @}}",
+  "operations": {
+    "dataset-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "params": {
+        "api_key": "$SECRET(api_key)"
+      },
+      "url": "datasets"
+    },
+    "dataset-list": {
+      "method": "GET",
+      "id_expression": "{{ id }}",
+      "params": {
+        "api_key": "$SECRET(api_key)"
+      },
+      "url": "datasets"
+    },
+    "dataset-update": {
+      "method": "POST",
+      "id_expression": "{{ id }}",
+      "params": {
+        "api_key": "$SECRET(api_key)"
+      },
+      "url": "datasets"
+    },
+    "dataset-delete": {
+      "method": "DELETE",
+      "id_expression": "{{ id }}",
+      "params": {
+        "api_key": "$SECRET(api_key)"
+      },
+      "url": "datasets"
+    },
+    "dataset-lookup": {
+      "method": "GET",
+      "params": {
+        "api_key": "$SECRET(api_key)"
+      },
+      "url": "datasets/{{ entity.id }}"
+      
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "{{@ base_url @}}/api/%s",
+  "verify_ssl": true
+}

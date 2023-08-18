@@ -1,0 +1,14 @@
+{
+  "additional_parameters": {
+    "base_url": {}
+  },
+  "auth": "api_key",
+  "datatypes": {
+    "dataset": {
+      "label": "Dataset",
+      "template": "templates/dataset.json"
+    }
+  },
+  "system": "Akkio",
+  "system-template": "templates/system.json"
+}
